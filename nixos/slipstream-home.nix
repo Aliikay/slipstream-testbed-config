@@ -7,10 +7,6 @@
   ...
 }:
 {
-  imports = [
-    inputs.dms.homeModules.niri
-  ];
-
   # BTOP
   programs.btop = {
     enable = true;
