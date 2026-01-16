@@ -124,7 +124,7 @@
     enable = true;
 
     package = (
-      pkgs.mpv-unwrapped.wrapper {
+      pkgs.mpv.override {
         scripts = with pkgs.mpvScripts; [
           uosc
           mpris
