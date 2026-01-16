@@ -13,24 +13,19 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
     atuin
-    alejandra # nix file formatter
+    alacritty-graphics
     appimage-run
     base16-shell-preview
     base16-universal-manager
     bat
     btop
-    decibels
     delta
     docker
     dysk
     eza
-    gnome-software
-    gnome-tweaks
-    gnome-extension-manager
-
     git
     gh
-    ghostty
+    helix
     killall
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum

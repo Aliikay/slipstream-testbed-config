@@ -156,12 +156,12 @@ in
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
-  # Enable the GNOME Desktop Environment.
+  # Desktop
   services.displayManager.gdm.enable = true;
-  services.desktopManager.gnome.enable = true;
   services.displayManager.gdm.wayland = true;
-  services.gnome.gnome-user-share.enable = true;
-  services.gnome.gnome-online-accounts.enable = true;
+
+  programs.dms-shell.enable = true;
+  programs.niri.enable = true;
 
   # Hardware
   hardware = {
@@ -301,47 +301,6 @@ in
     offset = 0;
     mask = ''\xff\xff\xff\xff\x00\x00\x00\x00\xff\xff\xff'';
     magicOrExtension = ''\x7fELF....AI\x02'';
-  };
-
-  # Theming
-  stylix = {
-    enable = true;
-    autoEnable = true;
-
-    image = ./slipstream-water.png;
-
-    cursor.package = pkgs.bibata-cursors;
-    cursor.name = "Bibata-Modern-Classic";
-    cursor.size = 32;
-
-    targets.grub.useWallpaper = true;
-
-    targets.plymouth.enable = true;
-    targets.plymouth.logoAnimated = false;
-
-    fonts = {
-      sansSerif = {
-        #package = pkgs.inter;
-        #name = "Inter";
-
-        package = pkgs.poppins;
-        name = "Poppins";
-      };
-
-      #serif = {
-      #  package = pkgs.poppins;
-      #  name = "Poppins";
-      #};
-
-      monospace = {
-        package = pkgs.nerd-fonts.space-mono;
-        name = "SpaceMono Nerd Font";
-      };
-    };
-
-    polarity = "dark";
-
-    targets.qt.platform = lib.mkForce "qtct";
   };
 
   # Enable the OpenSSH daemon.

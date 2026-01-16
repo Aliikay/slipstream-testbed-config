@@ -8,9 +8,6 @@
     # Latest unstable branch of nixos
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # stylix to theme the entire system
-    stylix.url = "github:danth/stylix/release-25.11";
-
     # Flake version for command-not-found
     flake-programs-sqlite.url = "github:wamserma/flake-programs-sqlite";
     flake-programs-sqlite.inputs.nixpkgs.follows = "nixpkgs";
@@ -88,8 +85,6 @@
           ./nixos/hardware-configuration.nix
           ./nixos/configuration.nix
           ./nixos/packages.nix
-
-          inputs.stylix.nixosModules.stylix
 
           home-manager.nixosModules.home-manager
           {

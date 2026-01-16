@@ -1,22 +1,5 @@
 { config, pkgs, ... }:
 {
-  # Stylix
-  stylix = {
-    enable = true;
-    autoEnable = true;
-
-    targets.waybar.enable = false;
-
-    # iconTheme = {
-    #   enable = true;
-    #   package = pkgs.gruvbox-plus-icons.override {
-    #     folder-color = "highland";
-    #   };
-    #   dark = "Gruvbox-Plus-Dark";
-    #   light = "Gruvbox-Plus-Light";
-    # };
-  };
-
   # BTOP
   programs.btop = {
     enable = true;
