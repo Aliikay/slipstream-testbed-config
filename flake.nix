@@ -98,8 +98,6 @@
           ./nixos/configuration.nix
           ./nixos/packages.nix
 
-          inputs.dms.nixosModules.dank-material-shell
-
           home-manager.nixosModules.home-manager
           {
             home-manager.useGlobalPkgs = true;
