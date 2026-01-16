@@ -12,6 +12,10 @@
     flake-programs-sqlite.url = "github:wamserma/flake-programs-sqlite";
     flake-programs-sqlite.inputs.nixpkgs.follows = "nixpkgs";
 
+    # Disko
+    disko.url = "github:nix-community/disko";
+    disko.inputs.nixpkgs.follows = "nixpkgs";
+
     # Home-manager, used for managing user configuration
     home-manager = {
       #url = "github:nix-community/home-manager";
@@ -35,6 +39,7 @@
       self,
       nixpkgs,
       nixpkgs-unstable,
+      disko,
       #nixpkgs-pinned,
       #nixpkgs-stable,
       #nixpkgs-last-stable,
@@ -81,6 +86,11 @@
         system = "x86_64-linux";
         specialArgs = mySpecialArgs;
         modules = [
+          disko.nixosModules.disko
+          ./nixos/disko.nix
+          {
+            disko.devices.main.device = nixpkgs.lib.mkForce "/dev/vda";
+          }
 
           ./nixos/hardware-configuration.nix
           ./nixos/configuration.nix
