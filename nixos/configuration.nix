@@ -40,11 +40,6 @@
   boot.consoleLogLevel = 0;
   boot.initrd.verbose = false;
 
-  # Enable plymouth for a good looking boot splash
-  boot.plymouth = {
-    enable = true;
-  };
-
   boot.kernelParams = [
     # Disable the boot messages
     "quiet"
@@ -62,11 +57,17 @@
   '';
 
   # Bootloader.
-  boot.loader.systemd-boot = {
-    enable = true;
-    configurationLimit = 20;
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi"; # ← use the same mount point here.
+    };
+    grub = {
+      efiSupport = true;
+      #efiInstallAsRemovable = true; # in case canTouchEfiVariables doesn't work for your system
+      device = "nodev";
+    };
   };
-  boot.loader.efi.canTouchEfiVariables = true;
 
   # Networking
   networking.hostName = "slipstream-testbed"; # Define your hostname.

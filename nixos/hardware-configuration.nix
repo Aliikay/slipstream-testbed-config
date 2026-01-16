@@ -25,9 +25,5 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  swapDevices = [
-    { device = "/dev/disk/by-uuid/b0c1d00c-ce54-4983-8b5d-21a1f389f523"; }
-  ];
-
   nixpkgs.hostPlatform = lib.mkDefault "x86_64-linux";
 }
