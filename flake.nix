@@ -103,13 +103,11 @@
 
             # Optionally, use home-manager.extraSpecialArgs to pass arguments to home.nix
           }
-        ]
-        # This unfourtanatly makes the flake impure :( but there isn't a better way to have it only import if you have the secrets flake on disk.
-        ++ nixpkgs.lib.optional (builtins.pathExists /home/alikay/dotfile-secrets) ./nixos/modules/secrets.nix;
+        ];
       };
     in
     {
       #, hyprland, ... }: {
-      nixosConfigurations.alikay = generic-system;
+      nixosConfigurations.slipstream-testbed = generic-system;
     };
 }
