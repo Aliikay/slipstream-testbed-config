@@ -23,6 +23,10 @@ in
     (final: prev: { mpv = prev.mpv.override { scripts = mpvScripts; }; })
   ];
 
+  imports = [
+    inputs.dms.nixosModules.dank-material-shell
+  ];
+
   # Bootloader.
   # boot.loader.grub.enable = true;
   # boot.loader.grub.device = "/dev/vda";
@@ -159,6 +163,12 @@ in
   # Desktop
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
+
+  programs.dank-material-shell = {
+    enable = true;
+    dgop.package = pkgs-unstable.dgop;
+  };
+  programs.niri.enable = true;
 
   # Hardware
   hardware = {

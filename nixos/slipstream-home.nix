@@ -8,9 +8,9 @@
 }:
 {
   imports = [
-    inputs.dms.homeModules.dank-material-shell
-    inputs.dms.homeModules.niri
+    inputs.dms.nixosModules.niri
   ];
+
   # BTOP
   programs.btop = {
     enable = true;
@@ -19,12 +19,6 @@
     #  theme_background = false;
     #};
   };
-
-  programs.dank-material-shell = {
-    enable = true;
-    dgop.package = pkgs-unstable.dgop;
-  };
-  programs.niri.enable = true;
 
   # Atuin
   programs.atuin.enable = true;
