@@ -18,11 +18,6 @@ let
   ];
 in
 {
-  imports = [
-    # Include the results of the hardware scan.
-    ./hardware-configuration.nix
-  ];
-
   # Overlays
   nixpkgs.overlays = [
     (final: prev: { mpv = prev.mpv.override { scripts = mpvScripts; }; })

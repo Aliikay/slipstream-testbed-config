@@ -85,6 +85,7 @@
         specialArgs = mySpecialArgs;
         modules = [
 
+          ./nixos/hardware-configuration.nix
           ./nixos/configuration.nix
           ./nixos/packages.nix
 
