@@ -2,23 +2,27 @@
   disko.devices = {
     disk = {
       main = {
-        device = "/dev/vda";
         type = "disk";
+        device = "/dev/vda";
         content = {
           type = "gpt";
           partitions = {
+            boot = {
+              size = "1M";
+              type = "EF02"; # for grub MBR
+            };
             ESP = {
-              end = "500M";
+              size = "512M";
               type = "EF00";
               content = {
                 type = "filesystem";
                 format = "vfat";
                 mountpoint = "/boot";
+                mountOptions = [ "umask=0077" ];
               };
             };
             root = {
-              name = "root";
-              end = "-0";
+              size = "100%";
               content = {
                 type = "filesystem";
                 format = "ext4";
