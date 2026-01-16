@@ -34,7 +34,6 @@
     inputs@{
       self,
       nixpkgs,
-      nixpkgs-unstable,
       disko,
       #nixpkgs-pinned,
       #nixpkgs-stable,
@@ -45,37 +44,6 @@
     let
       mySpecialArgs = {
         inherit inputs;
-        # To use packages from nixpkgs-unstable,
-        # we configure some parameters for it first
-        #pkgs-stable = import nixpkgs-stable {
-        # Refer to the `system` parameter from
-        # the outer scope recursively
-        #  inherit inputs;
-        #  system = "x86_64-linux";
-        #  config.allowUnfree = true;
-        #};
-
-        #pkgs-last-stable = import nixpkgs-last-stable {
-        # Refer to the `system` parameter from
-        # the outer scope recursively
-        #  inherit inputs;
-        #  system = "x86_64-linux";
-        #  config.allowUnfree = true;
-        #};
-
-        pkgs-unstable = import nixpkgs-unstable {
-          # Refer to the `system` parameter from
-          # the outer scope recursively
-          inherit inputs;
-          system = "x86_64-linux";
-          config.allowUnfree = true;
-        };
-
-        #pkgs-pinned = import nixpkgs-pinned {
-        #  inherit inputs;
-        #  system = "x86_64-linux";
-        #  config.allowUnfree = true;
-        #};
       };
 
       generic-system = nixpkgs.lib.nixosSystem {
