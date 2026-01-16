@@ -5,9 +5,6 @@
     # Default to the June 2025 branch
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    # Latest unstable branch of nixos
-    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-
     # Flake version for command-not-found
     flake-programs-sqlite.url = "github:wamserma/flake-programs-sqlite";
     flake-programs-sqlite.inputs.nixpkgs.follows = "nixpkgs";
@@ -30,12 +27,6 @@
       # the `inputs.nixpkgs` of the current flake,
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    # Unstable home manager
-    home-manager-unstable = {
-      url = "github:nix-community/home-manager";
-      #inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

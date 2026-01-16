@@ -2,7 +2,6 @@
   config,
   lib,
   pkgs,
-  pkgs-unstable,
   #pkgs-stable,
   #pkgs-last-stable,
   inputs,
@@ -43,6 +42,6 @@
     webp-pixbuf-loader
     unityhub
     yazi
-    pkgs-unstable.zed-editor
+    zed-editor
   ];
 }
