@@ -11,18 +11,7 @@
   inputs,
   ...
 }:
-let
-  mpvScripts = with pkgs.mpvScripts; [
-    mpris
-    uosc
-  ];
-in
 {
-  # Overlays
-  nixpkgs.overlays = [
-    (final: prev: { mpv = prev.mpv.override { scripts = mpvScripts; }; })
-  ];
-
   imports = [ inputs.dms-plugin-registry.modules.default ];
 
   # Bootloader.

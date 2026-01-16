@@ -119,31 +119,6 @@
     enable = true;
   };
 
-  # MPV Scripts
-  programs.mpv = {
-    enable = true;
-
-    package = (
-      pkgs.mpv.override {
-        scripts = with pkgs.mpvScripts; [
-          uosc
-          mpris
-        ];
-
-        mpv = pkgs.mpv-unwrapped.override {
-          waylandSupport = true;
-        };
-      }
-    );
-
-    config = {
-      profile = "high-quality";
-      hwdec = "auto";
-      #ytdl-format = "bestvideo+bestaudio";
-      #cache-default = 4000000;
-    };
-  };
-
   # Alacritty
   programs.alacritty = {
     enable = true;
