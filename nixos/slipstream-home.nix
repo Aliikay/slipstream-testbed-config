@@ -8,7 +8,7 @@
 }:
 {
   imports = [
-    inputs.dms.nixosModules.niri
+    inputs.dms.homeModules.niri
   ];
 
   # BTOP
