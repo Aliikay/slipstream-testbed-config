@@ -160,7 +160,7 @@ in
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
 
-  programs.dms-shell.enable = true;
+  programs.dank-material-shell.enable = true;
   programs.niri.enable = true;
 
   # Hardware

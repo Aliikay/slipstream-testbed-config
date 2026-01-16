@@ -16,6 +16,11 @@
     disko.url = "github:nix-community/disko";
     disko.inputs.nixpkgs.follows = "nixpkgs";
 
+    dms = {
+      url = "github:AvengeMedia/DankMaterialShell/stable";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Home-manager, used for managing user configuration
     home-manager = {
       #url = "github:nix-community/home-manager";
@@ -92,6 +97,8 @@
           ./nixos/hardware-configuration.nix
           ./nixos/configuration.nix
           ./nixos/packages.nix
+
+          inputs.dms.nixosModules.dank-material-shell
 
           home-manager.nixosModules.home-manager
           {
