@@ -1,5 +1,16 @@
-{ config, pkgs, ... }:
 {
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  inputs,
+  ...
+}:
+{
+  imports = [
+    inputs.dms.homeModules.dank-material-shell
+    inputs.dms.homeModules.niri
+  ];
   # BTOP
   programs.btop = {
     enable = true;
@@ -8,6 +19,16 @@
     #  theme_background = false;
     #};
   };
+
+  programs.dank-material-shell = {
+    enable = true;
+    niri = {
+      enableKeybinds = true; # Sets static preset keybinds
+      enableSpawn = true; # Auto-start DMS with niri, if enabled
+    };
+    dgop.package = pkgs-unstable.dgop;
+  };
+  programs.niri.enable = true;
 
   # Atuin
   programs.atuin.enable = true;
