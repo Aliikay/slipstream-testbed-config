@@ -23,6 +23,11 @@ in
     (final: prev: { mpv = prev.mpv.override { scripts = mpvScripts; }; })
   ];
 
+  imports = [
+    inputs.dms.homeModules.dank-material-shell
+    inputs.dms.homeModules.niri
+  ];
+
   # Bootloader.
   # boot.loader.grub.enable = true;
   # boot.loader.grub.device = "/dev/vda";
@@ -160,7 +165,14 @@ in
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
 
-  programs.dank-material-shell.enable = true;
+  programs.dank-material-shell = {
+    enable = true;
+    niri = {
+      enableKeybinds = true; # Sets static preset keybinds
+      enableSpawn = true; # Auto-start DMS with niri, if enabled
+    };
+    dgop.package = pkgs-unstable.dgop;
+  };
   programs.niri.enable = true;
 
   # Hardware
