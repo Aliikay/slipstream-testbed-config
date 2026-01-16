@@ -23,9 +23,7 @@ in
     (final: prev: { mpv = prev.mpv.override { scripts = mpvScripts; }; })
   ];
 
-  imports = [
-    inputs.dms.nixosModules.dank-material-shell
-  ];
+  imports = [ inputs.dms-plugin-registry.modules.default ];
 
   # Bootloader.
   # boot.loader.grub.enable = true;
@@ -164,9 +162,8 @@ in
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
 
-  programs.dank-material-shell = {
+  programs.dms-shell = {
     enable = true;
-    dgop.package = pkgs-unstable.dgop;
   };
   programs.niri.enable = true;
 
