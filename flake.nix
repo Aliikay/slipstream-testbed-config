@@ -88,9 +88,6 @@
         modules = [
           disko.nixosModules.disko
           ./nixos/disko.nix
-          {
-            disko.devices.main.device = nixpkgs.lib.mkForce "/dev/vda";
-          }
 
           ./nixos/hardware-configuration.nix
           ./nixos/configuration.nix
