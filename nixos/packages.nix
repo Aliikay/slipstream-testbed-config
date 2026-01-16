@@ -1,0 +1,53 @@
+{
+  config,
+  lib,
+  pkgs,
+  pkgs-unstable,
+  #pkgs-stable,
+  #pkgs-last-stable,
+  inputs,
+  ...
+}:
+{
+  # List packages installed in unstable system profile. To search, run:
+  # $ nix search wget
+  environment.systemPackages = with pkgs; [
+    atuin
+    alejandra # nix file formatter
+    appimage-run
+    base16-shell-preview
+    base16-universal-manager
+    bat
+    btop
+    decibels
+    delta
+    docker
+    dysk
+    eza
+    gnome-software
+    gnome-tweaks
+    gnome-extension-manager
+
+    git
+    gh
+    ghostty
+    killall
+    kdePackages.qtstyleplugin-kvantum
+    libsForQt5.qtstyleplugin-kvantum
+    libreoffice
+    libsForQt5.qt5ct
+    qt6Packages.qt6ct
+    localsend
+    mangohud
+    micro
+    mpv
+    neovim
+    nil
+    nh
+    wineWowPackages.stable
+    webp-pixbuf-loader
+    unityhub
+    yazi
+    pkgs-unstable.zed-editor
+  ];
+}
