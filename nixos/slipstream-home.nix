@@ -7,17 +7,19 @@
 }:
 {
   imports = [
-    inputs.dms.homeModules.dank-material-shell
-    inputs.dms.homeModules.niri
+    inputs.dms.homeModules.dankMaterialShell.default
+    inputs.dms.homeModules.niri.default
   ];
 
-  programs.dank-material-shell = {
+  programs.dankMaterialShell = {
     enable = true;
     niri = {
       enableKeybinds = true;   # Sets static preset keybinds
       enableSpawn = true;      # Auto-start DMS with niri, if enabled
     };
   };
+
+  programs.niri.enable = true;
 
   # BTOP
   programs.btop = {
