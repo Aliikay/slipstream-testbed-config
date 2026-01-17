@@ -21,9 +21,9 @@
       name = "Update System";
       genericName = "System Utility";
       exec = "${pkgs.writeShellScript "update-system" ''
-        sudo nixos-rebuild switch --flake github:Aliikay/slipstream-testbed-config\#slipstream-testbed --show-trace --refresh
+        alacritty -e "sudo nixos-rebuild switch --flake github:Aliikay/slipstream-testbed-config\#slipstream-testbed --show-trace --refresh"
       ''}";
-      terminal = true;
+      terminal = false;
       categories = [
         "System"
         "Utility"
