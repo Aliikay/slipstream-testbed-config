@@ -144,6 +144,9 @@
 
   programs.dms-shell = {
     enable = true;
+    plugins = {
+      nixMonitor = true;
+    };
   };
   programs.niri.enable = true;
 
