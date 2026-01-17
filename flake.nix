@@ -18,6 +18,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    nix-monitor = {
+      url = "github:antonjah/nix-monitor";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Home-manager, used for managing user configuration
     home-manager = {
       #url = "github:nix-community/home-manager";
@@ -35,6 +40,7 @@
       self,
       nixpkgs,
       disko,
+      nix-monitor,
       #nixpkgs-pinned,
       #nixpkgs-stable,
       #nixpkgs-last-stable,
@@ -54,6 +60,8 @@
           ./nixos/disko.nix
 
           inputs.flake-programs-sqlite.nixosModules.programs-sqlite
+
+          nix-monitor.nixosModules.default
 
           ./nixos/hardware-configuration.nix
           ./nixos/configuration.nix
