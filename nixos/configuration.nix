@@ -150,6 +150,7 @@
     plugins = {
 
     };
+    systemd.enable = true;
   };
   programs.niri.enable = true;
   services.gvfs.enable = true;
