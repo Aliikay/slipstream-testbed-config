@@ -149,18 +149,6 @@
   };
   programs.niri.enable = true;
 
-  # Nix monitor for DMS
-  programs.nix-monitor = {
-    enable = true;
-
-    # Required: customize for your setup
-    rebuildCommand = [
-      "bash"
-      "-c"
-      "sudo nixos-rebuild switch --flake .#hostname 2>&1"
-    ];
-  };
-
   # Hardware
   hardware = {
     graphics = {
