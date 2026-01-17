@@ -41,6 +41,8 @@
     wineWowPackages.stable
     webp-pixbuf-loader
     unityhub
+    xwayland
+    xwayland-satellite
     yazi
     zed-editor
   ];
