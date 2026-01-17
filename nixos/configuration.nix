@@ -148,6 +148,7 @@
     };
   };
   programs.niri.enable = true;
+  services.gvfs.enable = true;
 
   # Hardware
   hardware = {

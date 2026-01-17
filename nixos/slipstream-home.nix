@@ -163,6 +163,10 @@
     enable = true;
   };
 
+  services.udiskie = {
+    enable = true;
+  };
+
   # Aliases
   home.shellAliases = {
     cat = "bat --pager=none";
