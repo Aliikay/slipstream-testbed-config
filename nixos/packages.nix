@@ -36,6 +36,7 @@
     micro
     mpv
     neovim
+    nautilus
     nil
     nh
     wineWowPackages.stable
