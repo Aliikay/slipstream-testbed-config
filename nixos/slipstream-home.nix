@@ -20,7 +20,7 @@
     update = {
       name = "Update System";
       genericName = "System Utility";
-      exec = "sh -c 'sudo nixos-rebuild switch --flake github:Aliikay/slipstream-testbed-config#slipstream-testbed --show-trace'";
+      exec = "sudo nixos-rebuild switch --flake github:Aliikay/slipstream-testbed-config\#slipstream-testbed --show-trace";
       terminal = true;
       categories = [
         "System"
