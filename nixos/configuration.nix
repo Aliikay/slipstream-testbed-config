@@ -11,7 +11,10 @@
   ...
 }:
 {
-  imports = [ inputs.dms-plugin-registry.modules.default ];
+  imports = [
+    inputs.dms.nixosModules.dank-material-shell
+    inputs.dms-plugin-registry.modules.default
+  ];
 
   # Bootloader.
   # boot.loader.grub.enable = true;
@@ -142,9 +145,10 @@
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
 
-  programs.dms-shell = {
+  programs.dank-material-shell = {
     enable = true;
     plugins = {
+
     };
   };
   programs.niri.enable = true;
