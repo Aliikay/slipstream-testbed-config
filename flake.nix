@@ -53,6 +53,8 @@
           disko.nixosModules.disko
           ./nixos/disko.nix
 
+          inputs.flake-programs-sqlite.nixosModules.programs-sqlite
+
           ./nixos/hardware-configuration.nix
           ./nixos/configuration.nix
           ./nixos/packages.nix
