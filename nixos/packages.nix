@@ -24,6 +24,7 @@
     eza
     git
     gh
+    gnome-text-editor
     helix
     killall
     kdePackages.qtstyleplugin-kvantum
