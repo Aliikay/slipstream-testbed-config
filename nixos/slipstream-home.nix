@@ -8,7 +8,7 @@
 {
   imports = [
     inputs.dms.homeModules.dank-material-shell
-    inputs.dms.homeModules.niri
+    #inputs.dms.homeModules.niri
   ];
 
   programs.dank-material-shell = {
