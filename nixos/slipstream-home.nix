@@ -15,6 +15,20 @@
     #};
   };
 
+  # Update desktop entry
+  xdg.desktopEntries = {
+    update = {
+      name = "Update System";
+      genericName = "System Utility";
+      exec = "sudo nixos-rebuild boot --flake github:Aliikay/slipstream-testbed-config#slipstream-testbed --show-trace";
+      terminal = true;
+      categories = [
+        "System"
+        "Utility"
+      ];
+    };
+  };
+
   # Atuin
   programs.atuin.enable = true;
 
