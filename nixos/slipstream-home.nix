@@ -20,7 +20,9 @@
     update = {
       name = "Update System";
       genericName = "System Utility";
-      exec = "sudo nixos-rebuild switch --flake github:Aliikay/slipstream-testbed-config\#slipstream-testbed --show-trace";
+      exec = "${pkgs.writeShellScript "update-system" ''
+        sudo nixos-rebuild switch --flake github:Aliikay/slipstream-testbed-config\#slipstream-testbed --show-trace
+      ''}";
       terminal = true;
       categories = [
         "System"
