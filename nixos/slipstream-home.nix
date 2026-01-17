@@ -7,11 +7,11 @@
 }:
 {
   imports = [
-    inputs.dms.homeModules.dankMaterialShell.default
-    inputs.dms.homeModules.niri.default
+    inputs.dms.homeModules.dank-material-shell
+    inputs.dms.homeModules.niri
   ];
 
-  programs.dankMaterialShell = {
+  programs.dank-material-shell = {
     enable = true;
     niri = {
       enableKeybinds = true;   # Sets static preset keybinds
