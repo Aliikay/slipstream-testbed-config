@@ -70,6 +70,7 @@
           # nix-monitor.nixosModules.default
 
           ./nixos/hardware-configuration.nix
+          ./nixos/network-share.nix
           ./nixos/configuration.nix
           ./nixos/packages.nix
 
