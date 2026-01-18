@@ -1,4 +1,12 @@
-{ }:
+{
+  config,
+  lib,
+  pkgs,
+  #pkgs-stable,
+  #pkgs-last-stable,
+  inputs,
+  ...
+}:
 {
   fileSystems."/home/slipstream-testbed/slipstream-share" = {
     device = "slipstream-share";
