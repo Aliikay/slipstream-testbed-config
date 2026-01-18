@@ -14,8 +14,6 @@
     atuin
     alacritty-graphics
     appimage-run
-    base16-shell-preview
-    base16-universal-manager
     bat
     btop
     delta
@@ -29,9 +27,7 @@
     killall
     kdePackages.qtstyleplugin-kvantum
     libsForQt5.qtstyleplugin-kvantum
-    libreoffice
-    libsForQt5.qt5ct
-    qt6Packages.qt6ct
+    lazygit
     localsend
     mangohud
     micro
