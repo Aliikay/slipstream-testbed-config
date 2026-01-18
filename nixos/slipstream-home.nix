@@ -59,6 +59,21 @@
     #     "Utility"
     #   ];
     # };
+
+    start-slipstream = {
+      name = "Start Slipstream";
+      genericName = "System Utility";
+      exec = "${pkgs.writeShellScript "start-slipstream-outer" ''
+        ~/Unity/Hub/Editor/6000.0.65f1/Editor/Unity -projectPath ~/slipstream-share/Slipstream -force-vulkan -force-gfx-mt & disown
+
+        steam %U -nochatui -nofriendsui -silent & disown
+      ''}";
+      terminal = false;
+      categories = [
+        "System"
+        "Utility"
+      ];
+    };
   };
 
   # Atuin
