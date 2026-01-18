@@ -145,6 +145,12 @@
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
 
+  # Swapfile
+  swapDevices = [{
+    device = "/var/lib/swapfile";
+    size = 16*1024; # 16 GB
+  }];
+
   programs.dank-material-shell = {
     enable = true;
     plugins = {
