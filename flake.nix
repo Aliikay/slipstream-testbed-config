@@ -73,6 +73,7 @@
           ./nixos/network-share.nix
           ./nixos/configuration.nix
           ./nixos/packages.nix
+          ./nixos/nix-ld.nix
 
           home-manager.nixosModules.home-manager
           {
