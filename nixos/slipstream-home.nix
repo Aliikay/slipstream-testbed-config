@@ -41,23 +41,24 @@
       ];
     };
 
-    get-slipstream = {
-      name = "Get Slipstream";
-      genericName = "System Utility";
-      exec = "${pkgs.writeShellScript "get-slipstream-outer" ''
-        alacritty -e sh -c "${pkgs.writeShellScript "get-slipstream-inner" ''
-          rm -r ~/Documents/Slipstream
-          mkdir ~/Documents/Slipstream
-          cp -r /run/user/1000/gvfs/smb-share:server=192.168.1.115,share=public/Link\ to\ Slipstream ~/Documents/Slipstream
-          read -p "Press any key"
-        ''}"
-      ''}";
-      terminal = false;
-      categories = [
-        "System"
-        "Utility"
-      ];
-    };
+    # get-slipstream = {
+    #   name = "Get Slipstream";
+    #   genericName = "System Utility";
+    #   exec = "${pkgs.writeShellScript "get-slipstream-outer" ''
+    #     alacritty -e sh -c "${pkgs.writeShellScript "get-slipstream-inner" ''
+    #       echo "Removing old folder"
+    #       rm -r ~/Documents/Slipstream
+    #       mkdir ~/Documents/Slipstream
+    #       cp -r /run/user/1000/gvfs/smb-share:server=192.168.1.115,share=public/Link\ to\ Slipstream ~/Documents/Slipstream
+    #       read -p "Press any key"
+    #     ''}"
+    #   ''}";
+    #   terminal = false;
+    #   categories = [
+    #     "System"
+    #     "Utility"
+    #   ];
+    # };
   };
 
   # Atuin
