@@ -112,6 +112,14 @@
   # Allow for broken packages
   nixpkgs.config.allowBroken = false;
 
+  # Swapfile
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 16 * 1024; # 16 GB
+    }
+  ];
+
   # Automatic Garbage Collection for Generations
   nix.gc = {
     automatic = true;
@@ -138,18 +146,16 @@
   # Make nix follow the input in flake: helps nixd make correct suggestions
   nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
 
+  # Virt Manager guest additions
+  services.qemuGuest.enable = true;
+  services.spice-vdagentd.enable = true;
+
   # Enable the X11 windowing system.
   services.xserver.enable = true;
 
   # Desktop
   services.displayManager.gdm.enable = true;
   services.displayManager.gdm.wayland = true;
-
-  # Swapfile
-  swapDevices = [{
-    device = "/var/lib/swapfile";
-    size = 16*1024; # 16 GB
-  }];
 
   programs.dank-material-shell = {
     enable = true;
