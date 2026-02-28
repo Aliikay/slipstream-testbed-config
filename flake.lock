@@ -49,11 +49,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772154742,
-        "narHash": "sha256-CCMdL0IFJ5Vxqq9uit0vSeJnV5tRaKigd2idZzVd2f4=",
+        "lastModified": 1772240849,
+        "narHash": "sha256-ZD8Y3YSVIz7BKw9tewEEFP7I8bXxJ47Uh68mvQxys2A=",
         "owner": "AvengeMedia",
         "repo": "dms-plugin-registry",
-        "rev": "46ed44669dd3c9f2e42f25d2cd5d544dd8071bff",
+        "rev": "1563c1ee7c66047809c179edc062616542a7a0f5",
         "type": "github"
       },
       "original": {
@@ -70,11 +70,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1772193563,
-        "narHash": "sha256-SGrbcv5XPFXQ5j9/LaZ6kP24v91aH18nTcRAWlRXg/E=",
+        "lastModified": 1772247541,
+        "narHash": "sha256-u0G0lHVSnnlDxm54kBNhd/XQCO9G9zjCufkA7KTvIRY=",
         "owner": "wamserma",
         "repo": "flake-programs-sqlite",
-        "rev": "827ed29c41c0d3ff9a6eda2daf1148faf925a4c1",
+        "rev": "80fe8b2e1406fde8899bcfae44410ab30f92005a",
         "type": "github"
       },
       "original": {
@@ -90,11 +90,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1772164835,
-        "narHash": "sha256-zRcwrZDeBfYipqv/7K7TqsfPb87LFU6b7JhoNUGSnvQ=",
+        "lastModified": 1772218752,
+        "narHash": "sha256-G8nArvOTZXU8DRvrzAdz3Elcj6kA/vMtvY9mrGLATtA=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "2a39b0828bbffce0d73769a61e46e780488d098b",
+        "rev": "f3a30376bb9eb2f6f61816be7d6ed954b6d2a3b9",
         "type": "github"
       },
       "original": {
