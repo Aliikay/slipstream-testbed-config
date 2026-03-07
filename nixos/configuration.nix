@@ -154,8 +154,26 @@
   services.xserver.enable = true;
 
   # Desktop
-  services.displayManager.gdm.enable = true;
-  services.displayManager.gdm.wayland = true;
+  #services.displayManager.gdm.enable = true;
+  #services.displayManager.gdm.wayland = true;
+  services.displayManager.ly = {
+    enable = true;
+    settings = {
+      animation = "colormix";
+      animation_frame_delay = 128;
+
+      bigclock = "en";
+
+      colormix_col1 = "0x1e1e2eff";
+      colormix_col2 = "0xf38ba8ff";
+      colormix_col3 = "0x89b4faff";
+
+      default_input = "password";
+
+      clock = "%c";
+      initial_info_text = "core login";
+    };
+  };
 
   programs.dank-material-shell = {
     enable = true;
