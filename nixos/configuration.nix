@@ -159,7 +159,7 @@
   services.displayManager.ly = {
     enable = true;
     settings = {
-      animation = "colormix";
+      animation = "none";
       animation_frame_delay = 128;
 
       bigclock = "en";
