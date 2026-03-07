@@ -36,7 +36,7 @@
     nautilus
     nil
     nh
-    wineWowPackages.stable
+    wineWow64Packages.stable
     webp-pixbuf-loader
     unityhub
     xwayland
